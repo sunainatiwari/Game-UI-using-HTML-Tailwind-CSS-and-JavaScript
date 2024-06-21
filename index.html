@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun & Number Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="container bg-white p-6 rounded-lg shadow-md text-center w-96 h-96" id="main-container">
+        <h1 class="text-2xl font-bold mb-4" id="main-title">Fun Games</h1>
+        <div class="nav-buttons mb-4" id="nav-buttons">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="showGame('swg')">Snake Water Gun</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="showGame('ngg')">Number Guessing</button>
+        </div>
+        <div id="swg-game" class="game hidden">
+            <h2 class="text-xl font-bold mb-4">Snake Water Gun Game</h2>
+            <div class="choices mb-4">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="playSWG('snake')">Snake</button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="playSWG('water')">Water</button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="playSWG('gun')">Gun</button>
+            </div>
+            <div class="result text-lg text-gray-700">
+                <p id="swg-result"></p>
+            </div>
+        </div>
+        <div id="ngg-game" class="game hidden">
+            <h2 class="text-xl font-bold mb-4">Number Guessing Game</h2>
+            <input type="number" id="userGuess" placeholder="Enter your guess" class="border rounded py-2 px-4 mb-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="checkGuess()">Submit</button>
+            <div class="result text-lg text-gray-700 mt-4">
+                <p id="ngg-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
